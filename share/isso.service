@@ -3,7 +3,9 @@ Description=lightweight Disqus alternative
 
 [Service]
 Type=simple
+# this user must have write permission to the db and the folder the db is in
 User=isso
+# assuming isso has been installed to /opt/isso
 ExecStart=/opt/isso/bin/isso -c /opt/isso/conf/isso.ini run
 
 [Install]
